@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+<title> {{obj.Ev}} </title>
+
+{% endblock %}
+
+</head>
+
+
+
+<body>
+
+    {% block body %}
+    <script>document.write('Bu bir script kodudur.')</script>
+    <script>
+        document.writeln({{obj.Ev}})
+    </script>
+
+    <h1>{{obj.Sezon_Yıl}}</h1>
+    <h1>{{obj.ev_id}}</h1>
+    <h1>{{obj.dep_id}}</h1>
+    <h1>{{obj.Ev}}</h1>
+    <h1>{{obj.Dep}}</h1>
+    <h1>{{obj.OranMS1}}</h1>
+    <h1>{{obj.OranMS0}}</h1>
+    <h1>{{obj.OranMS2}}</h1>
+    <h1>{{obj.OranAlt}}</h1>
+    <h1>{{obj.OranÜst}}</h1>
+
+
+    <table class="table  table-primary-info mytable">
+
+
+        {% for i in puan1 %}
+
+
+        <tr>
+
+            <td> {{i.Takımİd}} </td>
+            <td> {{i.Attığı_İ}}</td>
+            <td> {{i.Puan_İ}} </td>
+            <td> {{i.M_D}} </td>
+
+        </tr>
+
+
+        {% endfor %}
+
+    </table>
+    <table class="table  table-primary-info mytable">
+
+
+        {% for i in puan2 %}
+
+
+        <tr>
+
+
+
+            <td> {{i.Takımİd}} </td>
+            <td> {{i.Attığı_İ}}</td>
+            <td> {{i.Puan_İ}} </td>
+            <td> {{i.M_D}} </td>
+
+            <td>
+
+                <script>
+
+                    var numOne = {{ i.Attığı_İ }};
+                    var numTwo = {{ i.Attığı_İ }};
+                    var sum = numOne + numTwo;
+                    document.write(sum);
+                    document.write('Ev Takımı')
+                </script>
+
+            <td>
+
+            </td>
+            <script>
+                var numOne = {{ i.Attığı_İ }};
+                var numTwo = {{ i.Attığı_İ }};
+                var sum = numOne + numTwo;
+                document.write(sum);
+            </script>
+
+            </td>
+
+            </td>
+            <script>
+                var numOne = {{ i.Attığı_İ }};
+                var numTwo = {{ i.Attığı_İ }};
+                var sum = numOne + numTwo;
+                document.write(sum);
+            </script>
+
+            </td>
+
+            </td>
+            <script>
+                var numOne = {{ i.Attığı_İ }};
+                var numTwo = {{ i.Attığı_İ }};
+                var sum = numOne + numTwo;
+                document.write(sum);
+            </script>
+
+            </td>
+
+            </td>
+            <script>
+                var numOne = {{ i.Attığı_İ }};
+                var numTwo = {{ i.Attığı_İ }};
+                var sum = numOne + numTwo;
+                document.write(sum);
+            </script>
+
+            </td>
+
+        </tr>
+
+
+        {% endfor %}
+
+    </table>
+
+
+
+    <table class="table  table-primary-info mytable">
+
+
+        {% for i in puand %}
+
+
+        <tr>
+
+            <td> {{i.TakımAdı_x}} </td>
+            <td> {{i.Oynadığı_İ}}</td>
+            <td> {{i.Attığı_İ}}</td>
+            <script>var numOne = {{ i.Attığı_İ }};var numTwo = {{ i.Attığı_İ }};var sum = numOne + numTwo;document.write(sum/2);</script>
+
+        </tr>
+
+
+        {% endfor %}
+
+    </table>
+
+    {% endblock %}
+</body>
+
+</html>

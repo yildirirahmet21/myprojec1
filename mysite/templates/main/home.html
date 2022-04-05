@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfam</title>
+
+</head>
+
+{% extends "base.html" %}
+
+
+<body>
+
+    {% block body %}
+    {% load static %}
+    <audio controls muted>
+        <source src="{% static 'images\Ela_Gözlüm.mp3' %}"  type="audio/wav">
+     </audio>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2 table-responsive part1">
+                deneme
+            </div>
+            <div class="col-10 table-responsive-sm">
+                <table class="table  table-primary-info mytable">
+                    <thead>
+                        <tr>
+                            <th scope="col">mac_id</th>
+                            <th scope="col">Ulke</th>
+                            <th scope="col">Lig</th>
+
+                            <th scope="col">Ev</th>
+                            <th scope="col">Dep</th>
+                            <th scope="col">Dk_Skor</th>
+                            <th scope="col">İy_ev</th>
+                            <th scope="col">İy_dep</th>
+                            <th scope="col">Ms_Ev</th>
+                            <th scope="col">Ms_Dep</th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for i in datam %}
+
+                        <tr>
+                            <td>
+                                <a href="maclar/{{i.id}}" style="text-decoration: none;">
+                                    {{ i.id }}
+                                </a>
+                            </td>
+
+                            <td>
+                                <a href="maclar/{{i.Sezon_id}}" style="text-decoration: none;">
+                                    {{ i.Sezon_id }}
+                                </a>
+                            </td>
+
+                    
+                            <td>{{ i.Lig }}</td>
+
+                            <td>{{ i.Ev }}</td>
+                            <td>{{ i.Dep }}</td>
+                            <td>{{ i.Dk_Skor }}</td>
+                            <td>{{ i.iye_s}}</td>
+                            <td>{{ i.iyd_s }}</td>
+                            <td>{{ i.mse_s }}</td>
+                            <td>{{ i.msd_s }}</td>
+
+                        </tr>
+
+                        {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock %}
+
+</body>
+
+</html>
